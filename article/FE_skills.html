@@ -31,6 +31,62 @@
     <li>
       <h4>ie6的position: fixed</h4>
       <textarea>
+<style>
+* html,* html body {background-image:url(about:blank);background-attachment:fixed;}
+*{padding:0; margin:0;}
+.aa{height:1000px; background:#ccc;}
+.bb{position:fixed; right:0; bottom:0px; _margin-bottom:0px; width:100px; height:100px; background:#000;
+_position:absolute;
+_bottom:auto;
+/*_top:expression(eval(document.documentElement.scrollTop));顶部*/
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-
+
+(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));/*底部*/}
+</style>
+<script>
+  var ie6=!-[1,]&&!window.XMLHttpRequest;
+  if(ie6){
+      ifm.style.position="absolute";
+      
+      
+      if(json.vPosition == 1){
+          ifm.style.top="0";
+          var funcmy=function (){
+              var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+              ifm.style.top=5+scrollTop+'px';
+          }
+          funcmy ();
+      } else if(json.vPosition == 2){
+          
+          var funcmy=function (){
+              var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+              
+              ifm.style.top=(document.documentElement.clientHeight-json.height)/2+scrollTop+'px';
+          }
+          funcmy ();
+          
+      } else if(json.vPosition == 3){
+          ifm.style.bottom="0";
+          var funcmy=function (){
+              var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+              ifm.style.top=document.documentElement.clientHeight-ifm.offsetHeight-3+scrollTop+'px';
+          }
+      }
+      
+      var oldonscroll = window.onscroll;
+      if (typeof window.onscroll != 'function') {
+          window.onscroll = funcmy;
+      } else {
+          window.onscroll = function() {
+              oldonscroll();
+              funcmy();
+          }
+      }
+  }
+</script>
+      </textarea>
+      <p>完美的解决方案是增加一层元素里面滚动</p>
+      <textarea>
         /* IE6浏览器的特有方法 */
         * html,* html body{background-image:url(about:blank); background-attachment:fixed}/* 修正IE6抖动bug */
         * html .ie6fixedTL{position:absolute;left:expression(eval(document.documentElement.scrollLeft));top:expression(eval(document.documentElement.scrollTop))}/* 固定在左上角的固定层 */
@@ -76,33 +132,31 @@
     <li>
       <h4>javascript 获取服务器时间</h4>
       <textarea>
-        var myXHR=null;//ajax对象
+var myXHR=null;//ajax对象
 
-        if(window.ActiveXObject){
-            myXHR=new ActiveXObject("Microsoft.XMLHTTP");
-        }else{
-            myXHR=new XMLHttpRequest();
-        }
+if(window.ActiveXObject){
+    myXHR=new ActiveXObject("Microsoft.XMLHTTP");
+}else{
+    myXHR=new XMLHttpRequest();
+}
 
+myXHR.onreadystatechange=function(){
+    if(myXHR.readyState == 4){
 
-        myXHR.onreadystatechange=function(){
-            if(myXHR.readyState == 4){
+        var servertime=new Date(myXHR.getResponseHeader('Date'));
 
-                var servertime=new Date(myXHR.getResponseHeader('Date'));
+        alert(servertime.getFullYear());
+        alert(servertime.getMonth()+1);
+        alert(servertime.getDate());
 
+    }
+};
 
-                alert(servertime.getFullYear());
-                alert(servertime.getMonth()+1);
-                alert(servertime.getDate());
+//http://www.paulirish.com/2010/the-protocol-relative-url/
 
-            }
-        };
+myXHR.open("HEAD","//"+document.domain,true);
 
-        //http://www.paulirish.com/2010/the-protocol-relative-url/
-
-        myXHR.open("HEAD","//"+document.domain,true);
-
-        myXHR.send(null);
+myXHR.send(null);
       </textarea>
     </li>
     <li>
@@ -114,9 +168,7 @@
     </li>
     <li>
       <h4>图片没加载前的loding 背景图</h4>
-      <textarea>
-        img {background: url("data:image/gif;base64,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") center center no-repeat;}
-      </textarea>
+      <img src="about:blank" style="background: url(data:image/gif;base64,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) center center no-repeat;" />
     </li>
     <li>
       <h4>低版本 ie 空标签 不能 在flash 层上显示</h4>
@@ -182,7 +234,7 @@
     <li>
       <h4>input里面的输入光标大小 <a href="http://www.cnblogs.com/mofish/archive/2011/03/24/1993552.html" target="_blank">原文地址</a></h4>
       <p>
-        IE：不管该行有没有文字，光标高度与font-size一致。FF：该行有文字时，光标高度与font-size一致。该行无文字时，光标高度与input的height一致。 Chrome：该行无文字时，光标高度与line-height一致；该行有文字时，光标高度从input顶部到文字底部(这两种情况都是在有设定line-height的时候)，如果没有line-height，则是与font-size一致。 解决的方案： 给input的height设定一个较小的高度，然后用padding去填充，基本上可以解决所有浏览器的问题 
+        IE：不管该行有没有文字，光标高度与font-size一致。FF：该行有文字时，光标高度与font-size一致。该行无文字时，光标高度与input的height一致。 Chrome：该行无文字时，光标高度与line-height一致；该行有文字时，光标高度从input顶部到文字底部(这两种情况都是在有设定line-height的时候)，如果没有line-height，则是与font-size一致。 解决的方案： 给input的height设定一个较小的高度，然后用padding去填充，基本上可以解决所有浏览器的问题
       </p>
       <textarea>
         input {
@@ -214,93 +266,34 @@
     <li>
       <h4>获取url中的参数</h4>
       <textarea>
-        function getQueryStringRegExp(name, url){
+function getQueryStringRegExp(name, url){
 
-            var url = url || location.href;
+    var url = url || location.href;
 
-            var reg = new RegExp("[\?|&]"+ name +"=([^&]*)", "i");
+    var reg = new RegExp("[\?|&]"+ name +"=([^&]*)", "i");
 
-            return reg.exec(url) && reg.exec(url)[1] || "";
+    return reg.exec(url) && reg.exec(url)[1] || "";
 
-        /*    if(reg.test(url)){
+/*    if(reg.test(url)){
 
-                return unescape(RegExp.$1.replace(/\+/g, " "));
+        return unescape(RegExp.$1.replace(/\+/g, " "));
 
-            }
-        */
+    }
+*/
 
-        }
+}
 
-        alert(getQueryStringRegExp("hello","http://localhost:8080/test.html?hellsdfo=lkl&aa=bb&test=cc+dd&ee=ff&hello=iod士大夫上jdkl"));
+alert(getQueryStringRegExp("hello","http://localhost:8080/test.html?hellsdfo=lkl&aa=bb&test=cc+dd&ee=ff&hello=iod士大夫上jdkl"));
       </textarea>
     </li>
     <li>
       <h4>代替IE的hack</h4>
       <textarea>
-        <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-        <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-        <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-        <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-        <!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
-      </textarea>
-    </li>
-    <li>
-      <h4>ie6 fixed</h4>
-      <p>完美的解决方案是增加一层元素里面滚动</p>
-      <textarea>
-        <style>
-        * html,* html body {background-image:url(about:blank);background-attachment:fixed;}
-        *{padding:0; margin:0;}
-        .aa{height:1000px; background:#ccc;}
-        .bb{position:fixed; right:0; bottom:0px; _margin-bottom:0px; width:100px; height:100px; background:#000;
-        _position:absolute;
-        _bottom:auto;
-        /*_top:expression(eval(document.documentElement.scrollTop));顶部*/
-        _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-
-
-        (parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));/*底部*/}
-        </style>
-        <script>
-            var ie6=!-[1,]&&!window.XMLHttpRequest;
-            if(ie6){
-                ifm.style.position="absolute";
-                
-                
-                if(json.vPosition == 1){
-                    ifm.style.top="0";
-                    var funcmy=function (){
-                        var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-                        ifm.style.top=5+scrollTop+'px';
-                    }
-                    funcmy ();
-                } else if(json.vPosition == 2){
-                    
-                    var funcmy=function (){
-                        var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-                        
-                        ifm.style.top=(document.documentElement.clientHeight-json.height)/2+scrollTop+'px';
-                    }
-                    funcmy ();
-                    
-                } else if(json.vPosition == 3){
-                    ifm.style.bottom="0";
-                    var funcmy=function (){
-                        var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
-                        ifm.style.top=document.documentElement.clientHeight-ifm.offsetHeight-3+scrollTop+'px';
-                    }
-                }
-                
-                var oldonscroll = window.onscroll;
-                if (typeof window.onscroll != 'function') {
-                    window.onscroll = funcmy;
-                } else {
-                    window.onscroll = function() {
-                        oldonscroll();
-                        funcmy();
-                    }
-                }
-            }
-        </script>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
       </textarea>
     </li>
     <li>
@@ -333,21 +326,75 @@
       </p>
     </li>
     <li>
+      <h4>javascript 变量传递形式1</h4>
+      <textarea>
+function setName(obj){
+    obj.name = "xiaobai";//1
+    obj = new Object();  //2
+    obj.name = "xiaohei";//3
+return obj;   //4
+}
+var dog = new Object();  
+var cat=setName(dog);//调用函数就会开辟一个新栈区，把dog(dog是个引用指向堆区的对象)的值复制一份传给函数
+console.log(dog.name);//函数执行到第2句的时候修改了传递过去的值,指向了一个新的对象所以外层的dog指向并没有被修改打印出"xiaobai"
+console.log(cat.name);//函数的返回值指向的对象是在函数中被新创建的所以打印出"xiaohei"
+      </textarea>
+    </li>
+    <li>
       <h4>data</h4>
       <textarea>
-        data:,<文本数据>
-        data:text/plain,<文本数据>
-        data:text/html,<HTML代码>
-        data:text/html;base64,<base64编码的HTML代码>
-        data:text/css,<CSS代码>
-        data:text/css;base64,<base64编码的CSS代码>
-        data:text/javascript,<Javascript代码>
-        data:text/javascript;base64,<base64编码的Javascript代码>
-        data:image/gif;base64,base64编码的gif图片数据
-        data:image/png;base64,base64编码的png图片数据
-        data:image/jpeg;base64,base64编码的jpeg图片数据
-        data:image/x-icon;base64,base64编码的icon图片数据
+data:,<文本数据>
+data:text/plain,<文本数据>
+data:text/html,<HTML代码>
+data:text/html;base64,<base64编码的HTML代码>
+data:text/css,<CSS代码>
+data:text/css;base64,<base64编码的CSS代码>
+data:text/javascript,<Javascript代码>
+data:text/javascript;base64,<base64编码的Javascript代码>
+data:image/gif;base64,base64编码的gif图片数据
+data:image/png;base64,base64编码的png图片数据
+data:image/jpeg;base64,base64编码的jpeg图片数据
+data:image/x-icon;base64,base64编码的icon图片数据
       </textarea>
+    </li>
+    <li>
+      <h4>一些有用的网址</h4>
+      <p>
+        手机的分辨率 http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density <br/>
+        淘宝双飞翼(圣杯)布局 demo http://lifesinger.googlecode.com/svn/trunk/lab/2008/grids_test1.html <br/>
+        学习jQuery源码的bug了解网址 http://bugs.jquery.com/ <br/>
+        图片压缩的博客 http://handyxuefeng.blog.163.com/blog/static/45452172201391415246847/
+      </p>
+    </li>
+    <li>
+      <h4>JQuery和原生js的区别一</h4>
+      <textarea>
+<div id="div1">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</div>
+<script type="text/javascript">
+var oDiv=document.getElementByIdx_x('div1');
+var oUl=oDiv.getElementsByTagName_r('ul')[0];
+var aLi=oUl.getElementsByTagName_r('li');//3
+alert(aLi.length);//4
+oUl.innerHTML+=oUl.innerHTML;
+alert(aLi.length);//6
+</script>
+      </textarea>
+      <p>
+        第四句输出的是4<br/>
+        第六句输出的是8<br/>
+        如果第三句写成var aLi=$('li');<br/>
+        那么<br/>
+        第四句输出的是4<br/>
+        第六句输出的是4<br/>
+        理解： 原生的是在内存由浏览器管理的对象，这个对象是实时的，但是通过document.querySelectorAll() 选择的对象 不是实时的（权威指南第六版中有讲到）。而jquery 是维护的自己的类数组对象。
+      </p>
     </li>
   </ol>
 

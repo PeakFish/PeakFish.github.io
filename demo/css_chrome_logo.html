@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>chrome_logo</title>
+<style>
+
+.chrome {
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+
+  -webkit-animation-name: rotateme;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+
+  animation-name: rotateme;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes rotateme {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(2520deg);
+  }
+}
+
+
+@keyframes rotateme {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(2520deg);
+  }
+}
+.yellow- {
+  width: 50%;
+  height: 108px;
+  background-color: #FCD209;
+  position: absolute;
+  z-index: 3;
+  top: 132px;
+  left: 50%;
+}
+.yellow {
+  width: 50%;
+  height: 100%;
+  background-color: #FCD209;
+  position: absolute;
+  z-index: 1;
+  top: 132px;
+  left: 50%;
+}
+.yellow:after {
+  content: "";
+  position: absolute;
+  top: 324px;;
+  left: -39px;
+  width: 40px;
+  height: 40px;
+  background-color: #FCD209;
+}
+.green {
+  width: 50%;
+  height: 100%;
+  background-color: #4DB849;
+  position: absolute;
+  z-index: 2;
+  top: 132px;
+  left: 50%;
+  -webkit-transform-origin: 0 108px;
+  transform-origin: 0 108px;
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.green:after {
+  content: "";
+  position: absolute;
+  top: 324px;;
+  left: -39px;
+  width: 40px;
+  height: 40px;
+  background-color: #4DB849;
+
+}
+.red {
+  width: 50%;
+  height: 100%;
+  background-color: #FF0000;
+  position: absolute;
+  z-index: 3;
+  top: 132px;
+  left: 50%;
+  -webkit-transform-origin: 0 108px;
+  transform-origin: 0 108px;
+  -webkit-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+.red:after {
+  content: "";
+  position: absolute;
+  top: 324px;;
+  left: -39px;
+  width: 40px;
+  height: 40px;
+  background-color: #FF0000;
+}
+.o {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  width: 216px;
+  height: 216px;
+  margin: -108px 0 0 -108px;
+  border-radius: 50%;
+  border: 12px solid white;
+  background-color: #4486C6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+/*  background-image:-webkit-linear-gradient(top,#80B4E0,#125D97);
+  background-image:linear-gradient(top,#80B4E0,#125D97);*/
+}
+</style>
+</head>
+<body>
+  <div class="chrome">
+    <div class="yellow"></div>
+    <div class="green"></div>
+    <div class="red"></div>
+    <div class="yellow-"></div>
+    <div class="o"></div>
+  </div>
+</body>
+</html>

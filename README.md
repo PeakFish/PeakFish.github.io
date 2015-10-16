@@ -1,2 +1,1 @@
-blog
-thanks github..........
+blog Thanks GitHub
