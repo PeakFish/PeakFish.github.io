@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+  <meta charset="utf-8">
+  
+  <title>html 的 br 标签会占多高？ | PeakFish</title>
+  <meta name="author" content="PeakFish">
+  
+  <meta name="description" content="经过一番无聊的测试之后，&amp;lt;br/&amp;gt; 的高度等于它父级元素的行高 line-height，没有兼容问题。如果有使用的可能的话应该在浮动元素上吧。
+123456789101112131415161718192021222324252627282930313233343536373839404">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="html 的 br 标签会占多高？"/>
+  <meta property="og:site_name" content="PeakFish"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="PeakFish" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/css.css" media="screen" type="text/css" />
+
+
+
+</head>
+<body>
+
+  <header id="header" class="inner">
+  <div class="alignleft">
+    <h1><a href="/">PeakFish</a></h1>
+    <h2><a href="/"></a></h2>
+  </div>
+  <nav id="main-nav" class="alignright">
+    <ul>
+      
+        <li><a href="http://weibo.com/806660666" target="_blank">微博</a></li>
+      
+        <li><a href="http://github.com/peakfish" target="_blank">GitHub</a></li>
+      
+    </ul>
+    <div class="clearfix"></div>
+  </nav>
+  <div class="clearfix"></div>
+</header>
+
+
+  <div id="content" class="inner clearfix">
+    <div id="main-col">
+      <div id="wrapper">
+        <article class="post">
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2016-03-15T00:00:00.000Z">2016-03-15</time>
+      
+      <!--引入标题的方法是引入一个的文件-->
+      
+  
+    <h1 class="title">html 的 br 标签会占多高？</h1>
+  
+
+
+    </header>
+    <div class="entry">
+      <p>经过一番无聊的测试之后，<code>&lt;br/&gt;</code> 的高度等于它父级元素的行高 <code>line-height</code>，没有兼容问题。如果有使用的可能的话应该在浮动元素上吧。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>关于&amp;lt;br/&amp;gt;的高度问题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span><br><span class="line">* &#123;margin:0;padding:0;&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  line-height:30px;</span><br><span class="line">  font-size:12px;</span><br><span class="line">&#125;</span><br><span class="line">.cut &#123;</span><br><span class="line">  clear:both;</span><br><span class="line">  height:30px;</span><br><span class="line">  line-height:30px;</span><br><span class="line">  background-color:black;</span><br><span class="line">  color:white;</span><br><span class="line">  text-align:center;</span><br><span class="line">  opacity:.5;</span><br><span class="line">  filter:alpha(opacity=50);</span><br><span class="line">&#125;</span><br><span class="line">.div1, .div2 &#123;</span><br><span class="line">  background-color:rgb(185,96,14);</span><br><span class="line">  line-height:18px;</span><br><span class="line">&#125;</span><br><span class="line">.floatdiv &#123;</span><br><span class="line">  float:left;</span><br><span class="line">  background-color:rgb(185,96,14);</span><br><span class="line">  line-height:30px;</span><br><span class="line">&#125;</span><br><span class="line">.span1, .span2 &#123;</span><br><span class="line">  background-color:rgb(185,96,14);</span><br><span class="line">  /*display:inline-block;*/</span><br><span class="line">&#125;</span><br><span class="line">.div3 &#123;</span><br><span class="line">  line-height:50px;</span><br><span class="line">  background-color:rgb(185,96,14);</span><br><span class="line">&#125;</span><br><span class="line">:root .innerdiv1, :root .innerdiv2 &#123;</span><br><span class="line">  line-height:22px;</span><br><span class="line">  color:black;</span><br><span class="line">  filter:none;/*处理IE9浏览器中的滤镜效果*/</span><br><span class="line">  background-color:rgba(0,0,0,0.5);</span><br><span class="line">&#125;</span><br><span class="line">.innerdiv1, .innerdiv2 &#123;</span><br><span class="line">  line-height:22px;</span><br><span class="line">  color:black;</span><br><span class="line">  filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000');</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div1"</span>&gt;</span>块级元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div2"</span>&gt;</span>块级元素<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cut"</span>&gt;</span>分割线<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"floatdiv"</span>&gt;</span></span><br><span class="line">        左浮动<span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">        左浮动2</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"floatdiv"</span>&gt;</span></span><br><span class="line">        左浮动</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cut"</span>&gt;</span>分割线<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span1"</span>&gt;</span>行内元素<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>/&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"span2"</span>&gt;</span>行内元素<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cut"</span>&gt;</span>分割线<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div3"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"innerdiv1"</span>&gt;</span>div内<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"innerdiv2"</span>&gt;</span>div内<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"cut"</span>&gt;</span>分割线<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+    </div>
+    <footer>
+      
+
+      
+      
+    </footer>
+  </div>
+</article>
+
+<section id="comment">
+  <h4 class="title">评论</h4>
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-html-br-height" data-title="html 的 br 标签会占多高？" data-url="peakfish.github.io/2016/03/15/html-br-height/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"peakfish"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="inner clearfix">
+  <div>
+    感谢 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    主题修改自 <a href="https://github.com/hexojs/hexo-theme-light" target="_blank">light</a>
+    
+    &copy; 2016 PeakFish
+    
+  </div>
+</footer>
+
+</body>
+</html>
