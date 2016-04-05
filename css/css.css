@@ -22,8 +22,14 @@ a {color:#258fb8;text-decoration:none;outline: none;}
 .index li a {display: block;padding: 10px 15px;}
 .index li a:hover {background: #eee;}
 
-
-
+@media (max-width: 1000px) {
+  #header {
+    padding: 0 10px;
+  }
+  #footer {
+    padding: 0 6px;
+  }
+}
 
 /* 添加 */
 
@@ -98,7 +104,6 @@ h3 {
   margin-left: 30px;
 }
 article {
-  box-shadow: 1px 2px 3px #ddd;
   background: #fff;
 }
 article.page {
@@ -134,7 +139,6 @@ article .gallery {
 }
 article .gallery:hover .control {
   opacity: 1;
-  -ms-filter: none;
   filter: none;
 }
 article .gallery img {
@@ -145,17 +149,9 @@ article .gallery img {
   top: 0;
   left: 0;
   opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
 }
 article .gallery .control {
   opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -ms-transition: 0.3s;
   transition: 0.3s;
 }
 article .gallery .prev,
@@ -226,7 +222,6 @@ article header .title a:hover {
   text-decoration: none;
 }
 article .entry {
-  text-align: justify;
   line-height: 1.6;
 }
 article .entry p,
@@ -248,6 +243,14 @@ article .entry ol {
 }
 article .entry ul {
   list-style-type: disc;
+}
+article .entry em {
+  margin: 0 0.4em;
+  color: #DD4F43;
+}
+article .entry strong {
+  margin: 0 0.4em;
+  font-weight: bold;
 }
 article .entry blockquote {
   border-top: 1px solid #ddd;
@@ -278,7 +281,6 @@ article .entry code {
   margin: 0 2px;
   font-size: 0.9em;
   border: 1px solid #ddd;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 article .entry pre {
@@ -436,7 +438,6 @@ article footer .addthis iframe {
 #comment {
   padding: 20px;
   background: #fff;
-  box-shadow: 1px 2px 3px #ddd;
   margin-bottom: 50px;
 }
 #comment .title {
@@ -484,14 +485,9 @@ article footer .addthis iframe {
   content: '\f07b';
 }
 .archive {
-  -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   border-bottom: 1px solid #ddd;
   margin-bottom: 50px;
-}
-.archive article {
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 .archive article .post-content {
   margin-bottom: 0;

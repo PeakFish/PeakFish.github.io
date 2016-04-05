@@ -5,12 +5,12 @@
 
   <meta charset="utf-8">
   
-  <title>nginx笔记 | PeakFish</title>
+  <title>nginx 笔记 | PeakFish</title>
   <meta name="author" content="PeakFish">
   
   <meta name="description" content="常用命令
 nginx -s stop -s 表示 signal， stop 是 快速退出
-nginx -s quit 安全退出 推出前会验证配置文件
+nginx -s quit 安全退出 退出前会验证配置文件
 nginx -s reload 重启
 
 虚拟主机配置在 nginx.conf 配置文件 http 块内 添加 server 块。或者也可以 inclu">
@@ -18,7 +18,7 @@ nginx -s reload 重启
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="nginx笔记"/>
+  <meta property="og:title" content="nginx 笔记"/>
   <meta property="og:site_name" content="PeakFish"/>
 
   
@@ -34,12 +34,12 @@ nginx -s reload 重启
 </head>
 <body>
 
-  <header id="header" class="inner">
+  <header id="header" class="inner clearfix">
   <div class="alignleft">
     <h1><a href="/">PeakFish</a></h1>
     <h2><a href="/"></a></h2>
   </div>
-  <nav id="main-nav" class="alignright">
+  <nav id="main-nav" class="alignright clearfix">
     <ul>
       
         <li><a href="http://weibo.com/806660666" target="_blank">微博</a></li>
@@ -47,9 +47,7 @@ nginx -s reload 重启
         <li><a href="http://github.com/peakfish" target="_blank">GitHub</a></li>
       
     </ul>
-    <div class="clearfix"></div>
   </nav>
-  <div class="clearfix"></div>
 </header>
 
 
@@ -65,7 +63,7 @@ nginx -s reload 重启
       <!--引入标题的方法是引入一个的文件-->
       
   
-    <h1 class="title">nginx笔记</h1>
+    <h1 class="title">nginx 笔记</h1>
   
 
 
@@ -73,7 +71,7 @@ nginx -s reload 重启
     <div class="entry">
       <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
 <li><code>nginx -s stop</code> -s 表示 signal， stop 是 快速退出</li>
-<li><code>nginx -s quit</code> 安全退出 <em>推出前会验证配置文件</em></li>
+<li><code>nginx -s quit</code> 安全退出 <em>退出前会验证配置文件</em></li>
 <li><code>nginx -s reload</code> 重启</li>
 </ul>
 <h3 id="虚拟主机配置"><a href="#虚拟主机配置" class="headerlink" title="虚拟主机配置"></a>虚拟主机配置</h3><p>在 nginx.conf 配置文件 <code>http</code> 块内 添加 <code>server</code> 块。或者也可以 <code>include e:/nginxConfig/*.conf;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">  listen    80; #监听端口</span><br><span class="line">  server_name webgl; #域名要绑定host</span><br><span class="line">  index index.html;</span><br><span class="line">  autoindex on; #是否允许目录访问</span><br><span class="line">  location / &#123;</span><br><span class="line">    root  E:/git/study_WebGL; #本地目录地址</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -92,7 +90,7 @@ nginx -s reload 重启
 <section id="comment">
   <h4 class="title">评论</h4>
   <!-- 多说评论框 start -->
-  <div class="ds-thread" data-thread-key="post-nginx-note" data-title="nginx笔记" data-url="peakfish.github.io/2016/03/17/nginx-note/"></div>
+  <div class="ds-thread" data-thread-key="post-nginx-note" data-title="nginx 笔记" data-url="peakfish.github.io/2016/03/17/nginx-note/"></div>
   <!-- 多说评论框 end -->
   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
