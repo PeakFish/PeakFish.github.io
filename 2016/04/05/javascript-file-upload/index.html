@@ -8,10 +8,10 @@
   <title>javascript 文件上传 | PeakFish</title>
   <meta name="author" content="PeakFish">
   
-  <meta name="description" content="对于javascript文件老是搞得不清不楚的，所以决定了解一下，记录在这里。先来简单了解下相关对象
+  <meta name="description" content="对于 javascript 文件上传老是搞得不清不楚的，所以决定了解一下，记录在这。先来简单了解下相关对象
 ArrayBuffer 缓冲数组，不能直接操作，需要依靠 DataView 。
 DataView 提供了一种用于向 ArrayBuffer 读写数据的底层接口。
-123456var littleEn">
+123456var littl">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -67,7 +67,7 @@ DataView 提供了一种用于向 ArrayBuffer 读写数据的底层接口。
 
     </header>
     <div class="entry">
-      <h6 id="对于javascript文件老是搞得不清不楚的，所以决定了解一下，记录在这里。先来简单了解下相关对象"><a href="#对于javascript文件老是搞得不清不楚的，所以决定了解一下，记录在这里。先来简单了解下相关对象" class="headerlink" title="对于javascript文件老是搞得不清不楚的，所以决定了解一下，记录在这里。先来简单了解下相关对象"></a>对于javascript文件老是搞得不清不楚的，所以决定了解一下，记录在这里。先来简单了解下相关对象</h6><ul>
+      <h6 id="对于-javascript-文件上传老是搞得不清不楚的，所以决定了解一下，记录在这。先来简单了解下相关对象"><a href="#对于-javascript-文件上传老是搞得不清不楚的，所以决定了解一下，记录在这。先来简单了解下相关对象" class="headerlink" title="对于 javascript 文件上传老是搞得不清不楚的，所以决定了解一下，记录在这。先来简单了解下相关对象"></a>对于 javascript 文件上传老是搞得不清不楚的，所以决定了解一下，记录在这。先来简单了解下相关对象</h6><ul>
 <li>ArrayBuffer 缓冲数组，不能直接操作，需要依靠 DataView 。</li>
 <li><p>DataView 提供了一种用于向 ArrayBuffer 读写数据的底层接口。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> littleEndian = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> buffer = <span class="keyword">new</span> <span class="built_in">ArrayBuffer</span>(<span class="number">2</span>);</span><br><span class="line">  <span class="keyword">new</span> <span class="built_in">DataView</span>(buffer).setInt16(<span class="number">0</span>, <span class="number">256</span>, <span class="literal">true</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Int16Array</span>(buffer)[<span class="number">0</span>] === <span class="number">256</span>;</span><br><span class="line">&#125;)();</span><br><span class="line"><span class="built_in">console</span>.log(littleEndian); <span class="comment">// true or false</span></span><br></pre></td></tr></table></figure>
