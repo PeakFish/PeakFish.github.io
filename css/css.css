@@ -14,25 +14,6 @@ input[type="button"], input[type="submit"], select, button {cursor:pointer;}
 a {color:#258fb8;text-decoration:none;outline: none;}
 .clearfix:after {content:"\200B";display:block;height:0;clear:both;}
 /***********reset end********************/
-/* 添加 */
-
-.index {background: white;margin-bottom: 50px;}
-
-.index h3 {padding: 10px 15px;font-size: 24px;border-bottom: 2px solid #ddd;}
-.index li {border-bottom: 1px solid #ddd;}
-.index li a {display: block;padding: 10px 15px;}
-.index li a:hover {background: #eee;}
-
-@media (max-width: 1000px) {
-  #header {
-    padding: 0 10px;
-  }
-  #footer {
-    padding: 0 6px;
-  }
-}
-
-/* 添加 */
 
 /*
 @import url("//fonts.googleapis.com/css?family=Lato:400,400italic");
@@ -652,3 +633,26 @@ pre .clojure .title {
 pre .deletion {
   color: #dc322f;
 }
+
+/* 添加 */
+
+.index {background: white;margin-bottom: 50px;}
+
+.index h3 {padding: 10px 15px;font-size: 24px;border-bottom: 2px solid #ddd;}
+.index li {border-bottom: 1px solid #ddd;}
+.index li a {display: block;padding: 10px 15px;}
+.index li a:hover {background: #eee;}
+
+@media (max-width: 1000px) {
+  #header {
+    padding: 0 10px;
+  }
+  #footer {
+    padding: 0 6px;
+  }
+  #header #main-nav ul li {
+    margin-left: 10px;
+  }
+}
+
+/* 添加 */
