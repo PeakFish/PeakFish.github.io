@@ -10,6 +10,3 @@ updated:
 
 会一点 WebGL 、写了个 [PFGL](https://github.com/PeakFish/pfgl.js) 欢迎围观。
 会一点 python 。
-
-
-
