@@ -28,7 +28,7 @@ http://www.cnblogs.com/zhouyangla/p/7081077.html
 
 
 
-ÎÄ¼şÉÏ´«
+æ–‡ä»¶ä¸Šä¼ 
 https://scotch.io/tutorials/how-to-handle-file-uploads-in-vue-2
 
 
@@ -70,7 +70,7 @@ var app6 = new Vue({
 #3
 <div id="app-5">
   <p>{{ message }}</p>
-  <button v-on:click="reverseMessage">Äæ×ªÏûÏ¢</button>
+  <button v-on:click="reverseMessage">é€†è½¬æ¶ˆæ¯</button>
 </div>
 
 var app5 = new Vue({
@@ -89,12 +89,12 @@ var app5 = new Vue({
 
 
 
-#×é¼ş
+#ç»„ä»¶
 
 Vue.component('todo-item', {
-  // todo-item ×é¼şÏÖÔÚ½ÓÊÜÒ»¸ö
-  // "prop"£¬ÀàËÆÓÚÒ»¸ö×Ô¶¨ÒåÊôĞÔ
-  // Õâ¸öÊôĞÔÃûÎª todo¡£
+  // todo-item ç»„ä»¶ç°åœ¨æ¥å—ä¸€ä¸ª
+  // "prop"ï¼Œç±»ä¼¼äºä¸€ä¸ªè‡ªå®šä¹‰å±æ€§
+  // è¿™ä¸ªå±æ€§åä¸º todoã€‚
   props: ['todo'],
   template: '<li>{{ todo.text }}</li>'
 })
@@ -103,9 +103,9 @@ Vue.component('todo-item', {
 <div id="app-7">
   <ol>
     <!--
-      ÏÖÔÚÎÒÃÇÎªÃ¿¸ö todo-item Ìá¹© todo ¶ÔÏó
-      todo ¶ÔÏóÊÇ±äÁ¿£¬¼´ÆäÄÚÈİ¿ÉÒÔÊÇ¶¯Ì¬µÄ¡£
-      ÎÒÃÇÒ²ĞèÒªÎªÃ¿¸ö×é¼şÌá¹©Ò»¸ö¡°key¡±£¬ÍíĞ©Ê±ºòÎÒÃÇ»á×ö¸ö½âÊÍ¡£
+      ç°åœ¨æˆ‘ä»¬ä¸ºæ¯ä¸ª todo-item æä¾› todo å¯¹è±¡
+      todo å¯¹è±¡æ˜¯å˜é‡ï¼Œå³å…¶å†…å®¹å¯ä»¥æ˜¯åŠ¨æ€çš„ã€‚
+      æˆ‘ä»¬ä¹Ÿéœ€è¦ä¸ºæ¯ä¸ªç»„ä»¶æä¾›ä¸€ä¸ªâ€œkeyâ€ï¼Œæ™šäº›æ—¶å€™æˆ‘ä»¬ä¼šåšä¸ªè§£é‡Šã€‚
     -->
     <todo-item
       v-for="item in groceryList"
@@ -124,16 +124,16 @@ var app7 = new Vue({
   el: '#app-7',
   data: {
     groceryList: [
-      { id: 0, text: 'Êß²Ë' },
-      { id: 1, text: 'ÄÌÀÒ' },
-      { id: 2, text: 'Ëæ±ãÆäËûÊ²Ã´ÈË³ÔµÄ¶«Î÷' }
+      { id: 0, text: 'è”¬èœ' },
+      { id: 1, text: 'å¥¶é…ª' },
+      { id: 2, text: 'éšä¾¿å…¶ä»–ä»€ä¹ˆäººåƒçš„ä¸œè¥¿' }
     ]
   }
 })
 
 
 
-ÔÚ×é¼şÉúÃüÖÜÆÚ ÀïÃæ¸Ä±äÖµ »á¼ÌĞø äÖÈ¾×é¼şÂğ ËÀÑ­»·
+åœ¨ç»„ä»¶ç”Ÿå‘½å‘¨æœŸ é‡Œé¢æ”¹å˜å€¼ ä¼šç»§ç»­ æ¸²æŸ“ç»„ä»¶å— æ­»å¾ªç¯
 
 
 
@@ -145,23 +145,23 @@ var app7 = new Vue({
 
 
 
-Ë¢ĞÂ¼òÀú loading ×´Ì¬
-user Í¼Æ¬
-ÏÂÎçºÃ ¼¸¸ö×´Ì¬
+åˆ·æ–°ç®€å† loading çŠ¶æ€
+user å›¾ç‰‡
+ä¸‹åˆå¥½ å‡ ä¸ªçŠ¶æ€
 
 
 https://github.com/mzabriskie/axios/issues/943
 
 
 
-watch $store ÉÏÃæµÄÊôĞÔ
+watch $store ä¸Šé¢çš„å±æ€§
 https://codepen.io/CodinCat/pen/PpNvYr
 https://stackoverflow.com/questions/43270159/vuejs-2-how-to-watch-store-values-from-vuex
 
 
 
 
-Â·ÓÉÀÁ¼ÓÔØ vue Òì²½×é¼ş https://router.vuejs.org/zh-cn/advanced/lazy-loading.html
+è·¯ç”±æ‡’åŠ è½½ vue å¼‚æ­¥ç»„ä»¶ https://router.vuejs.org/zh-cn/advanced/lazy-loading.html
 http://www.cnblogs.com/ihardcoder/p/5993410.html
 
 
