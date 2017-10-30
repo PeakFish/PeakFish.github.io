@@ -1,4 +1,3 @@
----
 title: js getter 和 setter
 date: 2017-10-04 23:25:00
 updated:
