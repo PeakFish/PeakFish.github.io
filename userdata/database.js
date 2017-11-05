@@ -6,6 +6,9 @@ window.VUELOG_DATABASE = {
     // The name of your site, will be displayed in browser tab and site header.
     brand: 'PeakFish',
 
+    // Put the site brand behind current page in `document.title`.
+    brandTrailing: true,
+
     // The image displayed in site header right beside the brand.
     logo: './static/PeakFish.jpg',
 
@@ -32,14 +35,14 @@ window.VUELOG_DATABASE = {
     // Number of posts listed in a blog/category view.
     postsCount: 12,
 
-    // Fill in the shortname to integrate Disqus with your blog.
-    disqusShortname: '',
+    // // Fill in the shortname to integrate Disqus with your blog.
+    // disqusShortname: '',
 
-    // Fill in the account to integrate IntenseDebate with your blog.
-    intenseDebateAccount: '',
+    // // Fill in the account to integrate IntenseDebate with your blog.
+    // intenseDebateAccount: '',
 
-    // Fill in the uid to integrate LiveRe with your blog.
-    livereUid: '',
+    // // Fill in the uid to integrate LiveRe with your blog.
+    // livereUid: '',
 
     // Options for marked, see https://github.com/chjj/marked#options-1 for detail
     markedOptions: {

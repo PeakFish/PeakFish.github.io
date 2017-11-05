@@ -2,7 +2,7 @@ title: 学习 vue
 date: 2017-09-04 23:25:00
 updated:
 ---
-
+<!-- more -->
 
 
 \c-i-site\pages\home\components\main\Activities.vue
