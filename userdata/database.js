@@ -111,18 +111,18 @@ window.VUELOG_DATABASE = {
 
   posts: [
     /* 2017 */
-    // {
-    //   title: 'js getter 和 setter',
-    //   slug: 'js-setter-getter',
-    //   category: 'articles',
-    //   date: '2017-10-04 23:25:00'
-    // },
-    // {
-    //   title: 'js 复制',
-    //   slug: 'js-copy',
-    //   category: 'articles',
-    //   date: '2017-09-29 15:08:55'
-    // },
+    {
+      title: 'js getter 和 setter',
+      slug: 'js-setter-getter',
+      category: 'articles',
+      date: '2017-10-04 23:25:00'
+    },
+    {
+      title: 'js 复制',
+      slug: 'js-copy',
+      category: 'articles',
+      date: '2017-09-29 15:08:55'
+    },
     /* 2016 */
     {
       title: '几种使元素固定在页面底部的布局方案',
