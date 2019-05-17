@@ -110,53 +110,55 @@ window.VUELOG_DATABASE = {
   ],
 
   posts: [
+    /* 2017 */
     {
       title: 'js getter 和 setter',
       slug: 'js-setter-getter',
       category: 'articles',
-      date: '2017-10-04 23:25:00'
+      date: '2017-10-04'
     },
     {
       title: 'js 复制',
       slug: 'js-copy',
       category: 'articles',
-      date: '2017-09-29 15:08:55'
+      date: '2017-09-29'
     },
+    /* 2016 */
     {
       title: '几种使元素固定在页面底部的布局方案',
       slug: 'sticky-footer',
       category: 'articles',
-      date: '2016-06-16 15:28:42'
+      date: '2016-06-16'
     },
     {
       title: 'javascript 文件上传',
       slug: 'javascript-file-upload',
       category: 'articles',
-      date: '2016-04-05 09:35:03'
+      date: '2016-04-05'
     },
     {
       title: 'nginx 笔记',
       slug: 'nginx-note',
       category: 'articles',
-      date: '2016-03-17 10:13:12'
+      date: '2016-03-17'
     },
     {
       title: 'onmouseenter 和 onmouseleave事件 非 ie 浏览器 模拟函数',
       slug: 'mouseover-mouseout',
       category: 'articles',
-      date: '2016-03-15 8:00:02'
+      date: '2016-03-15'
     },
     {
       title: 'html 的 br 标签会占多高？',
       slug: 'html-br-height',
       category: 'articles',
-      date: '2016-03-15 8:00:01'
+      date: '2016-03-15'
     },
     {
       title: '前端备忘',
       slug: 'FE-skills',
       category: 'articles',
-      date: '2016-03-15 8:00:00'
+      date: '2016-03-15'
     }
   ]
   
